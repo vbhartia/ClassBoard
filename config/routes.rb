@@ -9,7 +9,11 @@ Classboard::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
 
 root :to => "staticpages#index"
+
 get 'index'  => "class_session#index", as: "class_session_all" 
+
+get ':class_session_id'  => "key_takeaways#show", as: "key_takeaways_all" 
+
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
